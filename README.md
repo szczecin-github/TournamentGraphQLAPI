@@ -49,7 +49,7 @@ mutation RegisterTeams {
   t4: register(input: { email: "birch@trees.com", password: "Password123!", firstName: "Team", lastName: "Birch" }) { message }
 }
 ```
-Step 2: Get Team IDs
+### Step 2: Get Team IDs
 
 Run this query to find the IDs assigned to your new teams. Copy these 4 IDs, you will need them for Step 5.
 GraphQL
@@ -62,7 +62,7 @@ query GetTeamIds {
   }
 }
 ```
-Step 3: Login (Get Access Token)
+### Step 3: Login (Get Access Token)
 
 Login as "Team Oak" to get permission to create a tournament.
 GraphQL
@@ -84,7 +84,7 @@ mutation Login {
 
         Paste the token.
 ```
-Step 4: Create the Tournament
+### Step 4: Create the Tournament
 
 Create the tournament container.
 GraphQL
@@ -97,7 +97,7 @@ mutation CreateTournament {
   }
 }
 ```
-Step 5: Add Teams & Start
+### Step 5: Add Teams & Start
 
 Action: Replace REPLACE_WITH_ID_X with the actual IDs you copied in Step 2.
 GraphQL
@@ -117,7 +117,7 @@ mutation SetupBracket {
   }
 }
 ```
-Step 6: View the Bracket
+### Step 6: View the Bracket
 
 See who is playing against whom!
 GraphQL
@@ -139,7 +139,7 @@ query ViewMatches {
   }
 }
 ```
-Step 7: Play a Match (Optional)
+### Step 7: Play a Match (Optional)
 
 Pick a matchId from Step 6 and set a winner (using the winner's User ID).
 GraphQL
